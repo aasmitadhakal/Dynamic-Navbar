@@ -171,24 +171,28 @@ function Navbar() {
                                         </div>
                                       )}
                                    
-                                      {hoveredItem3 === child?.title && (
-                                        <div className="absolute  left-[22rem] w-44 top-[-3px] bg-white ">
+                                   {hoveredItem3 === child?.title && (
+                                        <div className="absolute  left-80 w-44 top-[-3px]  bg-white ">
                                           <ul>
                                             {child &&
                                               child?.children &&
                                               child?.children[0] &&
                                               child?.children[0] &&
+                                              child?.children[0] &&
                                               child?.children[0]?.map(
-                                                (subChilds, index) => {
+                                                (subChildrev, index) => {
                                                   return (
-                                                    <li className="py-2 px-2 hover:bg-gray-200">
+                                                    <li
+                                                    key={child?.id}
+                                                   
+                                                    className="py-2 px-2 hover:bg-gray-200">
                                                       <Link
-                                                        to={subChilds?.slug}
+                                                        to={subChildrev?.slug}
                                                         className=""
                                                       >
                                                         <span>
                                                           {" "}
-                                                          {subChilds?.title}
+                                                          {subChildrev?.title}
                                                         </span>
                                                       </Link>
                                                     </li>
